@@ -26,7 +26,6 @@ DdnsCheck() {
 
 	if [ $(echo -n "$RESULT"|grep -o "message\":\"success\""|wc -l) = 1 ];then
 	    echo "$(date) -- Update success"
-	    echo "LAST_IP=\"$IP\"" > $LAST_IP_FILE
 	else
 	    echo "$(date) -- Update failed"
 	fi
